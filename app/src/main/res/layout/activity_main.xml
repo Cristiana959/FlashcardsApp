@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Your Decks"
+     android:textSize="24dp"
+     android:padding="12dp"/>
+ <View
+     android:layout_height="30dp"
+     android:layout_width="20dp"/>
+
+
+
+
+
+<androidx.recyclerview.widget.RecyclerView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cards_recyclerview"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+ </androidx.recyclerview.widget.RecyclerView>
+
+ <Button
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Add a deck"
+     android:layout_gravity="center"/>
+
+</LinearLayout>
