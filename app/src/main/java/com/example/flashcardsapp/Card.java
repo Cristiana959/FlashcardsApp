@@ -12,6 +12,10 @@ public class Card implements Serializable {
         this.answer = answer;
     }
 
+    public Card(){
+
+    }
+
     public String getQuestion() {
         return question;
     }

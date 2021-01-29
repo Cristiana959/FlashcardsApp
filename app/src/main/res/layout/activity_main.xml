@@ -2,6 +2,7 @@
 
 <LinearLayout android:layout_height="wrap_content"
     android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -10,6 +11,7 @@
      android:layout_height="wrap_content"
      android:text="Your Decks"
      android:textSize="24dp"
+     android:id="@+id/big_title"
      android:padding="12dp"/>
  <View
      android:layout_height="30dp"
@@ -30,6 +32,8 @@
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:text="Add a deck"
+     android:id="@+id/add_deck_button"
      android:layout_gravity="center"/>
+
 
 </LinearLayout>

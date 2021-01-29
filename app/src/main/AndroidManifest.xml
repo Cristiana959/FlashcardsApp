@@ -9,14 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlashcardsApp">
-        <activity android:name=".ShowCardsActivity">
-
+        <activity android:name=".AddQuestionActivity"></activity>
+        <activity android:name=".AddDeckTitleActivity" />
+        <activity android:name=".AddDeckActivity">
             <intent-filter>
-                <action android:name="android.intent.action.flashcardsapp.ShowCards_ACT"/>
+                <action android:name="android.intent.action.flashcardsapp.AddDeck_ACT" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ShowCardsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.flashcardsapp.ShowCards_ACT" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

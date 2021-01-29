@@ -16,6 +16,10 @@ public class Deck implements Serializable {
         cards = new ArrayList<>();
     }
 
+    public Deck(){
+
+    }
+
 
     public String getTitle() {
         return title;

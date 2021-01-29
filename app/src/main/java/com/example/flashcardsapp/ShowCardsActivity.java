@@ -25,6 +25,22 @@ public class ShowCardsActivity extends AppCompatActivity {
     private ArrayList<Card> currentDeckCards;
     private int questionNumber;
 
+    public TextView getCardAnswer() {
+        return cardAnswer;
+    }
+
+    public void setCardAnswer(String cardAnswer) {
+        this.cardAnswer.setText(cardAnswer);
+    }
+
+    public TextView getCardQuestion() {
+        return cardQuestion;
+    }
+
+    public void setCardQuestion(String cardQuestion) {
+        this.cardQuestion.setText(cardQuestion);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

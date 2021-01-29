@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,6 +27,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
     private LayoutInflater inflater;
 
+
+
+
     Context context;
 
     public CardAdapter(ArrayList<Deck> dataSet, Context context){
@@ -43,12 +47,22 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull CardAdapter.CardViewHolder holder, int position) {
+
         holder.update(dataSet.get(position).getTitle(),dataSet.get(position).getDescription(),dataSet.get(position).getCards());
+
+
+
     }
 
     @Override
     public int getItemCount() {
         return dataSet.size();
+    }
+
+    public void updateAdapter(Deck d){
+        dataSet.clear();
+        dataSet.add(d);
+        notifyDataSetChanged();
     }
 
 
@@ -59,19 +73,35 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
         private TextView  deckDescription;
         private ArrayList<Card> cards = new ArrayList<>();
         private MaterialButton seeCardsButton;
+        private TextView newDecktile;
+        private TextView newQuestion;
+        private TextView newAnswer;
+        private MaterialButton addNewDeckTitleButton;
+        private MaterialButton addNewQuestionButton;
+        private Button addDeckButton;
+
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
             deckTtile = itemView.findViewById(R.id.deckTitle);
             deckDescription = itemView.findViewById(R.id.deckDescription);
             seeCardsButton = itemView.findViewById(R.id.seeCardsButton);
+            newDecktile = itemView.findViewById(R.id.new_deck_title_input);
+            newQuestion = itemView.findViewById(R.id.new_question_input);
+            newAnswer = itemView.findViewById(R.id.new_answer_input);
+            addNewDeckTitleButton = itemView.findViewById(R.id.set_title_button);
+            addNewQuestionButton = itemView.findViewById(R.id.add_question_button);
+            addDeckButton = itemView.findViewById(R.id.add_deck_button);
 
         }
+
+
 
         public void update(String newTitle, String newDescription,ArrayList<Card> newCards){
 
             //cardImage.setImageResource(newImageSrc);
             deckTtile.setText(newTitle);
+            //deckTtile.setText(newDecktile.getText());
             deckDescription.setText(newDescription);
             cards = newCards;
             seeCardsButton.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +115,12 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                     //intent.putExtra(MainActivity.DECK_BUNDLE,dataSet);
                     context.startActivity(intent);
                 }
+
+
+            
+
             });
+
 
         }
 
