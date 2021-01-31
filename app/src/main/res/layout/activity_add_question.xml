@@ -1,9 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddQuestionActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#3c57e8"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="8dp"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/ic_flashcards"/>
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="4dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Deck Title  "
+        android:theme="@style/TextInputLayoutStyle"
+        app:boxStrokeColor="@color/white"
+        app:counterTextColor="@color/white"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/new_deck_title_input"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Deck Description "
+            android:theme="@style/TextInputLayoutStyle"
+            app:boxStrokeColor="@color/white"
+            app:counterTextColor="@color/white"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_description_input"
+                android:textColor="@color/white"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:gravity="center">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Question "
+            android:theme="@style/TextInputLayoutStyle"
+            app:boxStrokeColor="@color/white"
+            app:counterTextColor="@color/white"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/new_question_input"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:gravity="center">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Answer "
+            app:boxStrokeColor="@color/white"
+            android:outlineAmbientShadowColor="@color/white"
+            android:theme="@style/TextInputLayoutStyle"
+            app:counterTextColor="@color/white"
+            app:hintTextColor="@color/white"
+            app:boxCornerRadiusBottomEnd="8dp"
+            android:textColorHint="@color/white"
+
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/new_answer_input"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:text="ADD QUESTION"
+        android:textColor="@color/white"
+        app:rippleColor="@color/white"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        app:strokeColor="@color/white"
+        android:id="@+id/add_question_button"
+        app:backgroundTint="	#3c57e8"
+        app:strokeWidth="1dp"
+        app:cornerRadius="8dp"
+        style="?attr/materialButtonOutlinedStyle"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:text="Create Deck"
+        android:textColor="@color/white"
+        app:rippleColor="@color/white"
+        app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+        app:strokeColor="@color/white"
+        android:id="@+id/create_deck_button"
+        app:backgroundTint="#3c57e8"
+        app:strokeWidth="1dp"
+        app:cornerRadius="8dp"
+        style="?attr/materialButtonOutlinedStyle"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+</LinearLayout>

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.app.Instrumentation;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,13 +27,9 @@ public class MainActivity extends AppCompatActivity {
     public static CardAdapter mAdapter;
     public MaterialButton seeDeckButton;
     public TextView mDeckTitle;
-    public Button addDeckButton;
-    public MaterialButton addNewDeckTitleButton;
-    public MaterialButton addNewQuestionButton;
-    public TextInputEditText newDeckTitle;
-    public TextInputEditText newQuestion;
-    public EditText newAnswer;
-    public TextView bigTitle;
+    public MaterialButton addDeckButton;
+
+
 
     int deck_title = 1;
 
@@ -43,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String DECK_TITLE_EXTRA = "com.example.flashcardsapp.key.DECK_TITLE_EXTRA";
     public static final String DECK_EXTRA = "com.example.flashcardsapp.key.DECK_EXTRA";
 
+
     public ArrayList<Deck> getDataSet(){
         return dataSet;
     }
@@ -51,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bigTitle = findViewById(R.id.big_title);
         dataSet = new ArrayList<Deck>();
 
 
@@ -118,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == deck_title) {
-            if (requestCode == Activity.RESULT_OK) {
+
                 Deck result = (Deck) data.getSerializableExtra("NEW DECK");
                 mAdapter.updateAdapter(result);
 
             }
-        }
+
 
     }}

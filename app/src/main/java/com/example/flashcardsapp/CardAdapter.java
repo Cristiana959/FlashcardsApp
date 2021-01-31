@@ -60,7 +60,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     }
 
     public void updateAdapter(Deck d){
-        dataSet.clear();
+        //dataSet.clear();
         dataSet.add(d);
         notifyDataSetChanged();
     }
@@ -89,7 +89,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             newDecktile = itemView.findViewById(R.id.new_deck_title_input);
             newQuestion = itemView.findViewById(R.id.new_question_input);
             newAnswer = itemView.findViewById(R.id.new_answer_input);
-            addNewDeckTitleButton = itemView.findViewById(R.id.set_title_button);
+
             addNewQuestionButton = itemView.findViewById(R.id.add_question_button);
             addDeckButton = itemView.findViewById(R.id.add_deck_button);
 
@@ -99,9 +99,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
         public void update(String newTitle, String newDescription,ArrayList<Card> newCards){
 
-            //cardImage.setImageResource(newImageSrc);
+
             deckTtile.setText(newTitle);
-            //deckTtile.setText(newDecktile.getText());
+
             deckDescription.setText(newDescription);
             cards = newCards;
             seeCardsButton.setOnClickListener(new View.OnClickListener() {

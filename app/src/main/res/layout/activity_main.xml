@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#3c57e8"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
  <TextView
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:text="Your Decks"
-     android:textSize="24dp"
+     android:textSize="30dp"
+     android:textStyle="bold"
+     android:textColor="@color/white"
      android:id="@+id/big_title"
      android:padding="12dp"/>
  <View
@@ -24,16 +27,28 @@
 <androidx.recyclerview.widget.RecyclerView android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/cards_recyclerview"
+    android:layout_gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
  </androidx.recyclerview.widget.RecyclerView>
 
- <Button
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:text="Add a deck"
+ <com.google.android.material.button.MaterialButton
+     android:layout_width="320dp"
+     android:layout_height="50dp"
+     android:text="ADD DECK"
+     android:textColor="@color/white"
+     app:rippleColor="@color/white"
+     app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+     app:strokeColor="@color/white"
      android:id="@+id/add_deck_button"
-     android:layout_gravity="center"/>
+     app:backgroundTint="#3c57e8"
+     app:strokeWidth="1dp"
+     app:cornerRadius="8dp"
+     style="?attr/materialButtonOutlinedStyle"
+     android:padding="10dp"
+     android:layout_gravity="center"
+     android:layout_marginTop="20dp"
+     />
 
 
 </LinearLayout>
